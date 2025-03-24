@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>易剪媒 - AI智能视频剪辑工具</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0a2e, #1a1a4a);
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 导航栏 */
+        nav {
+            background: linear-gradient(90deg, #1a237e, #4a148c);
+            padding: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        /* 主页标题 */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(76,175,80,0.1) 0%, transparent 70%);
+            animation: pulse 8s infinite;
+        }
+
+        /* 功能卡片 */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* 下载按钮 */
+        .download-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #00e676, #00c853);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2));
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        /* 动画效果 */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1>易剪媒</h1>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1 style="font-size: 2.5rem; margin-bottom: 20px;">AI智能视频剪辑新时代</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 40px;">基于DeepSeek的智能视频处理引擎，让剪辑像聊天一样简单</p>
+            <a href="易剪媒.apk" class="download-btn" download="易剪媒.apk">立即下载</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="features">
+            <div class="feature-card">
+                <h3>⚡ 极速处理</h3>
+                <p>本地GPU加速，多线程并行处理，提升300%剪辑效率</p>
+            </div>
+            <div class="feature-card">
+                <h3>🤖 智能二创</h3>
+                <p>AI自动去重/分镜混剪，轻松创作原创视频内容</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎯 对话式操作</h3>
+                <p>自然语言指令交互，无需复杂操作即可完成专业剪辑</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 80px 0;">
+            <h2 style="font-size: 2rem; margin-bottom: 30px;">核心优势</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <ul style="text-align: left; line-height: 2; font-size: 1.1rem;">
+                    <li>💎 完全免费无广告，纯净使用体验</li>
+                    <li>🚀 支持批量处理与一键重写功能</li>
+                    <li>🔧 智能学习用户偏好，越用越顺手</li>
+                    <li>🛡️ 本地化处理，保障隐私安全</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: rgba(0,0,0,0.2); padding: 30px; text-align: center;">
+        <p>© 2024 易剪媒 - 让视频创作更简单</p>
+    </footer>
+</body>
+</html>
